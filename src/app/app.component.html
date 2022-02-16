@@ -1,0 +1,42 @@
+<div class="container">
+  <p>Here is my button. You can use it everywhere you want. You can choose two types of forms (pill-form or squre-form), three different colors (+ hover and active). And of course you can give it any name you need (submit, delete, send etc.) .</p>
+  <h2>pill-form buttons:</h2>
+
+      <div class="example">
+        success button:
+        <app-button [btnName]="'SUCCESS'" [btnClass]="'btn btn-success pill-btn'"  (inAction)="successBtn()"></app-button>
+      </div>
+  
+      <div class="example">
+        failure button:
+        <app-button [btnName]="'failure'" [btnClass]="'btn btn-failure pill-btn'" (inAction)="failureBtn()"></app-button>
+      </div>
+
+      <div class="example">
+        regular button:
+        <app-button [btnName]="'regular'" [btnClass]="'btn btn-regular pill-btn'" (inAction)="regularBtn()"></app-button>
+      </div>
+
+  <h2>square-form buttons:</h2>
+
+      <div class="example">
+        success button:
+        <app-button [btnName]="'SUCCESS'" [btnClass]="'btn btn-success square-btn'" (inAction)="square($event)"></app-button>
+      </div>
+
+  <h2>form example:</h2>
+      <form class="example" (ngSubmit)="submit()">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your name">
+        </div>
+
+        <div>
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" placeholder="Enter your phone number">
+        </div>
+        <app-button [btnName]="'submit'" [btnClass]="'btn btn-success square-btn'"></app-button>
+      </form>
+  
+</div>
+
